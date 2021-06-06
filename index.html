@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<!--    <link rel="stylesheet" href="sweetalert2.min.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Выбор мест в злае</title>
+</head>
+<body>
+    <div class="movie-list">
+    </div>
+    <div class="cinema">
+<!--        <div class="select__movie">-->
+<!--            <label for='films' class="text-select">Выберите фильм:</label>-->
+<!--            <div class="films">-->
+<!--                <select name="films" id="films">-->
+<!--                    <option value="120" data-names="Кролик Питер 2 2D">Кролик Питер 2 2D (120 руб)</option>-->
+<!--                    <option value="140" data-names="Форсаж 9 2D">Форсаж 9 2D (140 руб)</option>-->
+<!--                    <option value="130" data-names="Круэлла 2D">Круэлла 2D (130 руб)</option>-->
+<!--                    <option value="120" data-names="Тихое место 2">Тихое место 2 (125 руб)</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="legends">
+            <div class="legend-seat busy">
+                <div class="icon-seat busy-icon"></div>
+                <span class="busy__text">- Занято</span>
+            </div>
+            <div class="legend-seat free">
+                <div class="icon-seat free-icon"></div>
+                <span class="free__text">- Свободно</span>
+            </div>
+            <div class="legend-seat selected">
+                <div class="icon-seat selected-icon"></div>
+                <span class="selected__text">- Выбранные</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="monitor"></div>
+                <div class="seats">
+                    <div class="row" data-row="1">
+                        <div class="seat" data-seat="1" data-row="1"></div>
+                        <div class="seat" data-seat="2" data-row="1"></div>
+                        <div class="seat" data-seat="3" data-row="1"></div>
+                        <div class="seat" data-seat="4" data-row="1"></div>
+                        <div class="seat" data-seat="5" data-row="1"></div>
+                        <div class="seat" data-seat="6" data-row="1"></div>
+                        <div class="seat" data-seat="7" data-row="1"></div>
+                        <div class="seat" data-seat="8" data-row="1"></div>
+                        <div class="seat" data-seat="9" data-row="1"></div>
+                        <div class="seat" data-seat="10" data-row="1"></div>
+                        <div class="seat" data-seat="11" data-row="1"></div>
+                        <div class="seat" data-seat="12" data-row="1"></div>
+                        <div class="seat" data-seat="13" data-row="1"></div>
+                        <div class="seat" data-seat="14" data-row="1"></div>
+                    </div>
+                    <div class="row" data-row="2">
+                        <div class="seat" data-seat="1" data-row="2"></div>
+                        <div class="seat" data-seat="2" data-row="2"></div>
+                        <div class="seat" data-seat="3" data-row="2"></div>
+                        <div class="seat" data-seat="4" data-row="2"></div>
+                        <div class="seat" data-seat="5" data-row="2"></div>
+                        <div class="seat" data-seat="6" data-row=""></div>
+                        <div class="seat" data-seat="7" data-row="2"></div>
+                        <div class="seat" data-seat="8" data-row="2"></div>
+                        <div class="seat" data-seat="9" data-row="2"></div>
+                        <div class="seat" data-seat="10" data-row="2"></div>
+                        <div class="seat" data-seat="11" data-row="2"></div>
+                        <div class="seat" data-seat="12" data-row="2"></div>
+                        <div class="seat" data-seat="13" data-row="2"></div>
+                        <div class="seat" data-seat="14" data-row="2"></div>
+                    </div>
+                    <div class="row" data-row="3">
+                        <div class="seat" data-seat="1" data-row="3"></div>
+                        <div class="seat" data-seat="2" data-row="3"></div>
+                        <div class="seat" data-seat="3" data-row="3"></div>
+                        <div class="seat" data-seat="4" data-row="3"></div>
+                        <div class="seat" data-seat="5" data-row="3"></div>
+                        <div class="seat" data-seat="6" data-row="3"></div>
+                        <div class="seat" data-seat="7" data-row="3"></div>
+                        <div class="seat" data-seat="8" data-row="3"></div>
+                        <div class="seat" data-seat="9" data-row="3"></div>
+                        <div class="seat" data-seat="10" data-row="3"></div>
+                        <div class="seat" data-seat="11" data-row="3"></div>
+                        <div class="seat" data-seat="12" data-row="3"></div>
+                        <div class="seat" data-seat="13" data-row="3"></div>
+                        <div class="seat" data-seat="14" data-row="3"></div>
+                    </div>
+                    <div class="row" data-row="4">
+                        <div class="seat" data-seat="1" data-row="4"></div>
+                        <div class="seat" data-seat="2" data-row="4"></div>
+                        <div class="seat" data-seat="3" data-row="4"></div>
+                        <div class="seat" data-seat="4" data-row="4"></div>
+                        <div class="seat" data-seat="5" data-row="4"></div>
+                        <div class="seat" data-seat="6" data-row="4"></div>
+                        <div class="seat" data-seat="7" data-row="4"></div>
+                        <div class="seat" data-seat="8" data-row="4"></div>
+                        <div class="seat" data-seat="9" data-row="4"></div>
+                        <div class="seat" data-seat="10" data-row="4"></div>
+                        <div class="seat" data-seat="11" data-row="4"></div>
+                        <div class="seat" data-seat="12" data-row="4"></div>
+                        <div class="seat" data-seat="13" data-row="4"></div>
+                        <div class="seat" data-seat="14" data-row="4"></div>
+                    </div>
+                    <div class="row" data-row="5">
+                        <div class="seat" data-seat="1" data-row="5"></div>
+                        <div class="seat" data-seat="2" data-row="5"></div>
+                        <div class="seat" data-seat="3" data-row="5"></div>
+                        <div class="seat" data-seat="4" data-row="5"></div>
+                        <div class="seat" data-seat="5" data-row="5"></div>
+                        <div class="seat" data-seat="6" data-row="5"></div>
+                        <div class="seat" data-seat="7" data-row="5"></div>
+                        <div class="seat" data-seat="8" data-row="5"></div>
+                        <div class="seat" data-seat="9" data-row="5"></div>
+                        <div class="seat" data-seat="10" data-row="5"></div>
+                        <div class="seat" data-seat="11" data-row="5"></div>
+                        <div class="seat" data-seat="12" data-row="5"></div>
+                        <div class="seat" data-seat="13" data-row="5"></div>
+                        <div class="seat" data-seat="14" data-row="5"></div>
+                    </div>
+                    <div class="row" data-row="6">
+                        <div class="seat" data-seat="1" data-row="6"></div>
+                        <div class="seat" data-seat="2" data-row="6"></div>
+                        <div class="seat" data-seat="3" data-row="6"></div>
+                        <div class="seat" data-seat="4" data-row="6"></div>
+                        <div class="seat" data-seat="5" data-row="6"></div>
+                        <div class="seat" data-seat="6" data-row="6"></div>
+                        <div class="seat" data-seat="7" data-row="6"></div>
+                        <div class="seat" data-seat="8" data-row="6"></div>
+                        <div class="seat" data-seat="9" data-row="6"></div>
+                        <div class="seat" data-seat="10" data-row="6"></div>
+                        <div class="seat" data-seat="11" data-row="6"></div>
+                        <div class="seat" data-seat="12" data-row="6"></div>
+                        <div class="seat" data-seat="13" data-row="6"></div>
+                        <div class="seat" data-seat="14" data-row="6"></div>
+                    </div>
+                    <div class="row" data-row="7">
+                        <div class="seat" data-seat="1" data-row="7"></div>
+                        <div class="seat" data-seat="2" data-row="7"></div>
+                        <div class="seat" data-seat="3" data-row="7"></div>
+                        <div class="seat" data-seat="4" data-row="7"></div>
+                        <div class="seat" data-seat="5" data-row="7"></div>
+                        <div class="seat" data-seat="6" data-row="7"></div>
+                        <div class="seat" data-seat="7" data-row="7"></div>
+                        <div class="seat" data-seat="8" data-row="7"></div>
+                        <div class="seat" data-seat="9" data-row="7"></div>
+                        <div class="seat" data-seat="10" data-row="7"></div>
+                        <div class="seat" data-seat="11" data-row="7"></div>
+                        <div class="seat" data-seat="12" data-row="7"></div>
+                        <div class="seat" data-seat="13" data-row="7"></div>
+                        <div class="seat" data-seat="14" data-row="7"></div>
+                    </div>
+                    <div class="row" data-row="8">
+                        <div class="seat" data-seat="1" data-row="8"></div>
+                        <div class="seat" data-seat="2" data-row="8"></div>
+                        <div class="seat" data-seat="3" data-row="8"></div>
+                        <div class="seat" data-seat="4" data-row="8"></div>
+                        <div class="seat" data-seat="5" data-row="8"></div>
+                        <div class="seat" data-seat="6" data-row="8"></div>
+                        <div class="seat" data-seat="7" data-row="8"></div>
+                        <div class="seat" data-seat="8" data-row="8"></div>
+                        <div class="seat" data-seat="9" data-row="8"></div>
+                        <div class="seat" data-seat="10" data-row="8"></div>
+                        <div class="seat" data-seat="11" data-row="8"></div>
+                        <div class="seat" data-seat="12" data-row="8"></div>
+                        <div class="seat" data-seat="13" data-row="8"></div>
+                        <div class="seat" data-seat="14" data-row="8"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="name"></div>
+                <div class="hr"></div>
+                <div class="sel">
+                    Выбранные места:
+                    <div class="sel-seat">
+
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="total">
+                    Итого к оплате: <span class="total-price">0</span> руб.
+                </div>
+                <div class="pay">
+                    <a href="#">Оплатить</a>
+                </div>
+            </div>
+        </div></div>
+<script src="js/index.js"></script>
+</body>
+</html>
